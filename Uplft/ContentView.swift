@@ -9,6 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     @State var message: String = ""
+    var scale_effect = 0
+
+    struct ButtonAnimation: ButtonStyle {
+        func makeBody(configuration: Self.Configuration) -> some View {
+            configuration.label
+                .scaleEffect(configuration.isPressed ? 0.96 : 1.0)
+                .brightness(configuration.isPressed ? 0.1 : 0)
+        }
+        
+    }
     var body: some View {
         
         
@@ -44,6 +54,7 @@ struct ContentView: View {
                 .padding(.bottom, 50)
             }
             .padding(.horizontal, 36.0)
+            .buttonStyle(ButtonAnimation())
         }
         
     }
