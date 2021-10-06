@@ -30,6 +30,7 @@ struct SignIn: View {
                 }
                 else if (error != nil) {
                     print("Error logging in!")
+                    signInFailed = true
                 }
             }
         }

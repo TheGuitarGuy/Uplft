@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var authenticated: Bool = false
     @State var userId: String = ""
     var body: some View {
         if !userId.isEmpty {
