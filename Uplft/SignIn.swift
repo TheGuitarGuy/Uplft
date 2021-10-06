@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct SignIn: View {
     //Sign in with email and password
@@ -17,7 +18,12 @@ struct SignIn: View {
     }
     //Register with email and password
     func register() {
-        print("This will register you someday")
+        if (!email.isEmpty && !password.isEmpty) {
+            print("Register new account")
+            Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+                // ...
+            }
+        }
     }
     
     //TODO: Other signin options
