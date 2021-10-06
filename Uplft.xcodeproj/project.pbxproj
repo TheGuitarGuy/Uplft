@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		996B5CC8270D3E2B0024D9B4 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B5CC7270D3E2B0024D9B4 /* SignIn.swift */; };
+		996B5CCA270D48860024D9B4 /* CreateMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B5CC9270D48860024D9B4 /* CreateMessage.swift */; };
 		9982E7B0270D116900AC7EC4 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 9982E7AF270D116900AC7EC4 /* FirebaseAnalytics */; };
 		9982E7B2270D116900AC7EC4 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 9982E7B1270D116900AC7EC4 /* FirebaseAuth */; };
 		9982E7B4270D116900AC7EC4 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 9982E7B3270D116900AC7EC4 /* FirebaseFirestore */; };
 		9982E7B6270D116900AC7EC4 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 9982E7B5270D116900AC7EC4 /* FirebaseMessaging */; };
 		9982E7B8270D15BF00AC7EC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9982E7B7270D15BF00AC7EC4 /* AppDelegate.swift */; };
-		9982E7B9270D17ED00AC7EC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9982E7B7270D15BF00AC7EC4 /* AppDelegate.swift */; };
-		9982E7BA270D17EF00AC7EC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9982E7B7270D15BF00AC7EC4 /* AppDelegate.swift */; };
 		9982E7BC270D1B7F00AC7EC4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9982E7BB270D1B7F00AC7EC4 /* GoogleService-Info.plist */; };
 		9982E7BD270D1B7F00AC7EC4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9982E7BB270D1B7F00AC7EC4 /* GoogleService-Info.plist */; };
 		9982E7BE270D1B7F00AC7EC4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9982E7BB270D1B7F00AC7EC4 /* GoogleService-Info.plist */; };
@@ -44,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		996B5CC7270D3E2B0024D9B4 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
+		996B5CC9270D48860024D9B4 /* CreateMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMessage.swift; sourceTree = "<group>"; };
 		9982E7B7270D15BF00AC7EC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9982E7BB270D1B7F00AC7EC4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DC6B4685270BDE7F00BFAE92 /* Uplft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Uplft.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +122,8 @@
 				DC6B4691270BDE8000BFAE92 /* Info.plist */,
 				9982E7B7270D15BF00AC7EC4 /* AppDelegate.swift */,
 				9982E7BB270D1B7F00AC7EC4 /* GoogleService-Info.plist */,
+				996B5CC7270D3E2B0024D9B4 /* SignIn.swift */,
+				996B5CC9270D48860024D9B4 /* CreateMessage.swift */,
 				DC6B468E270BDE8000BFAE92 /* Preview Content */,
 			);
 			path = Uplft;
@@ -293,9 +297,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				996B5CCA270D48860024D9B4 /* CreateMessage.swift in Sources */,
 				9982E7B8270D15BF00AC7EC4 /* AppDelegate.swift in Sources */,
 				DC6B468B270BDE7F00BFAE92 /* ContentView.swift in Sources */,
 				DC6B4689270BDE7F00BFAE92 /* UplftApp.swift in Sources */,
+				996B5CC8270D3E2B0024D9B4 /* SignIn.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,7 +309,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9982E7B9270D17ED00AC7EC4 /* AppDelegate.swift in Sources */,
 				DC6B469B270BDE8000BFAE92 /* UplftTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,7 +317,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9982E7BA270D17EF00AC7EC4 /* AppDelegate.swift in Sources */,
 				DC6B46A6270BDE8000BFAE92 /* UplftUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
