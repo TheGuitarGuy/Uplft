@@ -8,8 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var authenticated: Bool = false
+    @State var userId: String = ""
     var body: some View {
-        SignIn()
+        if !userId.isEmpty {
+            CreateMessage()
+        }
+        else {
+            SignIn(userId: $userId)
+        }
+        
     }
 }
 
