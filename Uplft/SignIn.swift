@@ -9,6 +9,19 @@
 import SwiftUI
 import FirebaseAuth
 
+extension Color {
+    static let lightGray = Color(red: 142 / 255, green: 142 / 255, blue: 142 / 255)
+}
+extension View {
+    func underlineTextField() -> some View {
+        self
+            .padding(.vertical, 10)
+            .overlay(Rectangle().frame(height: 1).padding(.top, 35))
+            .foregroundColor(.lightGray)
+            .padding(10)
+    }
+}
+
 struct SignIn: View {
     @Binding var userId: String
     
@@ -17,7 +30,15 @@ struct SignIn: View {
     
     @State var signInFailed: Bool = false
     @State var signInSucceeded: Bool = false
-    
+    // Awesome button animation
+    struct ButtonAnimation: ButtonStyle {
+        func makeBody(configuration: Self.Configuration) -> some View {
+            configuration.label
+                .scaleEffect(configuration.isPressed ? 0.96 : 1.0)
+                .brightness(configuration.isPressed ? 0.1 : 0)
+        }
+        
+    }
     //Sign in with email and password
     func signIn() {
         if (!email.isEmpty && !password.isEmpty) {
@@ -69,21 +90,14 @@ struct SignIn: View {
             TextField(
                 "Email",
                 text: $email)
-                    
-                    .underlineTextField()
-                    .padding(.leading)
-                    .padding(.bottom)
-                    .autocapitalization(.none)
-                    .disableAutocorrection(true)
-            SecureField(
-                "Password",
-                text: $password
-            )
                 .underlineTextField()
                 .padding(.leading)
-                .padding(.bottom)
-                .autocapitalization(.none)
-                .disableAutocorrection(true)
+                
+            SecureField("Enter a password", text: $password)
+                .underlineTextField()
+                .padding(.leading)
+                
+            
             HStack{
                 if #available(iOS 15.0, *) {
                     Button(action: signIn) {
@@ -98,8 +112,9 @@ struct SignIn: View {
 
                     }
                     .buttonStyle(ButtonAnimation())
+                    
                 } else {
-                    // Fallback on earlier versions
+                    
                     Button(action: signIn) {
                         ZStack
                         {
@@ -110,7 +125,7 @@ struct SignIn: View {
                             Text("Login").font(.system(size: 25, weight: .medium)).foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))).tracking(-0.64)
                         }
                     }
-                    buttonStyle(ButtonAnimation())
+                    .buttonStyle(ButtonAnimation())
                 }
                 if #available(iOS 15.0, *) {
                     Button(action: register) {
@@ -137,7 +152,7 @@ struct SignIn: View {
                             Text("Register").font(.system(size: 25, weight: .medium)).foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))).tracking(-0.64)
                         }
                     }
-                    buttonStyle(ButtonAnimation())
+                    .buttonStyle(ButtonAnimation())
                 }
             }
             
