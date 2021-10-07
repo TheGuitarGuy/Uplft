@@ -48,6 +48,7 @@ struct SignIn: View {
                     userId = user.uid
                     signInFailed = false
                     signInSucceeded = true
+                    defaults.set(userId, forKey: "userId")
                 }
                 else if (error != nil) {
                     print("Error logging in!")
@@ -67,6 +68,7 @@ struct SignIn: View {
                     userId = user.uid
                     signInFailed = false
                     signInSucceeded = true
+                    defaults.set(userId, forKey: "userId")
                 }
                 else if (error != nil) {
                     print("Error creating account!")
