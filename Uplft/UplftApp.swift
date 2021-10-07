@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import Firebase
 @main
 struct UplftApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
