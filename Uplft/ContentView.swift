@@ -17,7 +17,6 @@ struct ContentView: View {
     func getUser () {
         session.listen()
     }
-    //@State var userId: String = defaults.object(forKey: "userId") as? String ?? ""
     var body: some View {
         Group {
             if session.session != nil {

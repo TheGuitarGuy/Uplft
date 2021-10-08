@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		990153542710D3BD003B2431 /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990153532710D3BD003B2431 /* SessionStore.swift */; };
 		990153562710D409003B2431 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990153552710D409003B2431 /* User.swift */; };
+		990153592710FA65003B2431 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 990153582710FA65003B2431 /* FirebaseDatabase */; };
 		996B5CC8270D3E2B0024D9B4 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B5CC7270D3E2B0024D9B4 /* SignIn.swift */; };
 		996B5CCA270D48860024D9B4 /* CreateMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B5CC9270D48860024D9B4 /* CreateMessage.swift */; };
 		9982E7B0270D116900AC7EC4 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 9982E7AF270D116900AC7EC4 /* FirebaseAnalytics */; };
 		9982E7B2270D116900AC7EC4 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 9982E7B1270D116900AC7EC4 /* FirebaseAuth */; };
-		9982E7B4270D116900AC7EC4 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 9982E7B3270D116900AC7EC4 /* FirebaseFirestore */; };
 		9982E7B6270D116900AC7EC4 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 9982E7B5270D116900AC7EC4 /* FirebaseMessaging */; };
 		9982E7B8270D15BF00AC7EC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9982E7B7270D15BF00AC7EC4 /* AppDelegate.swift */; };
 		99B889A9270E8A9900B0B7DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 99B889A8270E8A9800B0B7DA /* GoogleService-Info.plist */; };
@@ -72,8 +72,8 @@
 			files = (
 				9982E7B6270D116900AC7EC4 /* FirebaseMessaging in Frameworks */,
 				9982E7B0270D116900AC7EC4 /* FirebaseAnalytics in Frameworks */,
+				990153592710FA65003B2431 /* FirebaseDatabase in Frameworks */,
 				9982E7B2270D116900AC7EC4 /* FirebaseAuth in Frameworks */,
-				9982E7B4270D116900AC7EC4 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +94,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		990153572710FA65003B2431 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DC6B467C270BDE7F00BFAE92 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +108,7 @@
 				DC6B4699270BDE8000BFAE92 /* UplftTests */,
 				DC6B46A4270BDE8000BFAE92 /* UplftUITests */,
 				DC6B4686270BDE7F00BFAE92 /* Products */,
+				990153572710FA65003B2431 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -178,8 +186,8 @@
 			packageProductDependencies = (
 				9982E7AF270D116900AC7EC4 /* FirebaseAnalytics */,
 				9982E7B1270D116900AC7EC4 /* FirebaseAuth */,
-				9982E7B3270D116900AC7EC4 /* FirebaseFirestore */,
 				9982E7B5270D116900AC7EC4 /* FirebaseMessaging */,
+				990153582710FA65003B2431 /* FirebaseDatabase */,
 			);
 			productName = Uplft;
 			productReference = DC6B4685270BDE7F00BFAE92 /* Uplft.app */;
@@ -638,6 +646,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		990153582710FA65003B2431 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9982E7AE270D116800AC7EC4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
 		9982E7AF270D116900AC7EC4 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 9982E7AE270D116800AC7EC4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
@@ -647,11 +660,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9982E7AE270D116800AC7EC4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
-		};
-		9982E7B3270D116900AC7EC4 /* FirebaseFirestore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9982E7AE270D116800AC7EC4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestore;
 		};
 		9982E7B5270D116900AC7EC4 /* FirebaseMessaging */ = {
 			isa = XCSwiftPackageProductDependency;
