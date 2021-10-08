@@ -56,7 +56,6 @@ struct CreateMessage: View {
             .padding(.horizontal, 36.0)
             .buttonStyle(ButtonAnimation())
         }
-        
     }
    
 }
