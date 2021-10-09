@@ -33,6 +33,12 @@ class SessionStore : ObservableObject {
                     uid: user.uid,
                     email: user.email
                 )
+                //Write user to database also
+                var ref: DatabaseReference!
+
+                ref = Database.database().reference()
+                
+                ref.child("users").child(user.uid).setValue(["email": user.email])
             } else {
                 self.session = nil
             }
@@ -49,7 +55,7 @@ class SessionStore : ObservableObject {
            password: String,
            handler: @escaping AuthDataResultCallback
            ) {
-           Auth.auth().createUser(withEmail: email, password: password, completion: handler)
+               Auth.auth().createUser(withEmail: email, password: password, completion: handler)
        }
     func signIn(
         email: String,

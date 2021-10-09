@@ -7,7 +7,7 @@
 //  A view for signing in or registering.
 
 import SwiftUI
-import FirebaseAuth
+import Firebase
 
 
 extension Color {
