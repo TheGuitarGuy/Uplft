@@ -10,35 +10,6 @@ import Firebase
 
 var ref: DatabaseReference!
 
-
-
-func sendMessage() {
-    //Pick a random user from firebase https://stackoverflow.com/a/60518405
-    ref = Database.database().reference()
-    let profilesRef = ref.child("users")
-    var winnerId = ""
-    profilesRef.observe(.value, with:
-                            {
-        //doing everything in the callback because no time to figure out a better way for now!
-        snapshot in
-        let allProfiles = snapshot.children.shuffled()
-        let randomProfile = allProfiles.randomElement()
-        let winner = randomProfile!
-        winnerId = String(describing: winner)
-        //Get just the part of the string we want (a pain)
-        let start = winnerId.index(winnerId.startIndex, offsetBy: 6)
-        let end = winnerId.index(winnerId.startIndex, offsetBy: 33)
-        let range = start...end
-        let subString = String(winnerId[range])
-        print(winnerId)
-        winnerId = String(subString)
-        print(winnerId)
-        
-        //We have the ID to send the message to. Now post the message
-    })
-}
-
-
 struct CreateMessage: View {
     @State var message: String = ""
     var scale_effect = 0
@@ -49,11 +20,40 @@ struct CreateMessage: View {
                 .scaleEffect(configuration.isPressed ? 0.96 : 1.0)
                 .brightness(configuration.isPressed ? 0.1 : 0)
         }
-        
     }
+    //Picks a random userId and posts a message to firebase tied to that user!
+    func sendMessage() {
+        //Pick a random user from firebase https://stackoverflow.com/a/60518405
+        ref = Database.database().reference()
+        let profilesRef = ref.child("users")
+        var winnerId = ""
+        profilesRef.observe(.value, with:
+                                {
+            //doing everything in the callback because no time to figure out a better way for now!
+            snapshot in
+            let allProfiles = snapshot.children.shuffled()
+            let randomProfile = allProfiles.randomElement()
+            let winner = randomProfile!
+            winnerId = String(describing: winner)
+            //Get just the part of the string we want (a pain)
+            let start = winnerId.index(winnerId.startIndex, offsetBy: 6)
+            let end = winnerId.index(winnerId.startIndex, offsetBy: 33)
+            let range = start...end
+            let subString = String(winnerId[range])
+            print(winnerId)
+            winnerId = String(subString)
+            print(winnerId)
+            
+            //We have the ID to send the message to. Now post the message
+            if message != "" {
+                ref.child("messages").childByAutoId().setValue(["content": message, "recipient": winnerId])
+                message = ""
+            }
+        })
+    }
+    
+    
     var body: some View {
-        
-        
         VStack
         {
             Image("logo")

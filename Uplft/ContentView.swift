@@ -9,8 +9,6 @@
 
 import SwiftUI
 
-let defaults = UserDefaults.standard
-
 struct ContentView: View {
     @StateObject var session = SessionStore()
     
