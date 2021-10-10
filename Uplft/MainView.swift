@@ -10,19 +10,14 @@ import SwiftUI
 struct MainView: View {
     var body: some View {
         TabView {
-            SignIn()
-                .tabItem {
-                    Image(systemName: "house")
-                    Text("Sign In")
-                }
             CreateMessage()
                 .tabItem {
-                    Image(systemName: "squareshape.split.2x2")
+                    Image(systemName: "paperplane.fill")
                     Text("Create a Message")
                 }
             MessageView()
                 .tabItem {
-                    Image(systemName: "ellipsis")
+                    Image(systemName: "envelope.open.fill")
                     Text("Your Messages")
                 }
                 
