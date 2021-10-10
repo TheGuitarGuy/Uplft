@@ -26,6 +26,7 @@
 		DC6B46B4270BE0CE00BFAE92 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DC6B46B3270BE0CE00BFAE92 /* logo.png */; };
 		DC90F75E27127DAE009FECB6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC90F75D27127DAE009FECB6 /* GoogleService-Info.plist */; };
 		DC90F7602712826C009FECB6 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC90F75F2712826C009FECB6 /* MessageView.swift */; };
+		DC90F76227128A07009FECB6 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC90F76127128A07009FECB6 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		DC6B46B3270BE0CE00BFAE92 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		DC90F75D27127DAE009FECB6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DC90F75F2712826C009FECB6 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		DC90F76127128A07009FECB6 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 				990153532710D3BD003B2431 /* SessionStore.swift */,
 				996B5CC9270D48860024D9B4 /* CreateMessage.swift */,
 				DC90F75F2712826C009FECB6 /* MessageView.swift */,
+				DC90F76127128A07009FECB6 /* MainView.swift */,
 				990153552710D409003B2431 /* User.swift */,
 				99B889A8270E8A9800B0B7DA /* GoogleService-Info.plist */,
 				DC90F75D27127DAE009FECB6 /* GoogleService-Info.plist */,
@@ -315,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				996B5CCA270D48860024D9B4 /* CreateMessage.swift in Sources */,
+				DC90F76227128A07009FECB6 /* MainView.swift in Sources */,
 				9982E7B8270D15BF00AC7EC4 /* AppDelegate.swift in Sources */,
 				990153542710D3BD003B2431 /* SessionStore.swift in Sources */,
 				DC6B468B270BDE7F00BFAE92 /* ContentView.swift in Sources */,
