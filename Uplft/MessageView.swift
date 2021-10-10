@@ -7,11 +7,29 @@
 
 import SwiftUI
 import Firebase
-var message: String?
-struct MessageView: View {
-    var body: some View {
-        
 
+struct Message {
+    var recipient: String
+    var content: String
+}
+
+struct MessageView: View {
+    @EnvironmentObject var session: SessionStore
+        var oneMessage = ""
+        func getMessage() {
+            let uid = session.session?.uid
+            ref = Database.database().reference()
+            let messagesRef = ref.child("messages").queryEqual(toValue: uid, childKey: "recipient")
+            messagesRef.observe(.value, with:
+                                    {
+                snapshot in
+                for item in snapshot.children {
+                    print (item)
+                }
+            })
+        }
+    
+    var body: some View {
         VStack{
             
             Image("logo")
@@ -28,12 +46,11 @@ struct MessageView: View {
                     .frame(width: 300, height: 90)
                     .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.25)), radius:4, x:0, y:4)
                 Text("").font(.custom("Roboto Regular", size: 16)).foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))).frame(width: 250.0, height: 80.0)
-            }
+            }.onAppear { self.getMessage() }
 
             
             
         }
-
     }
 }
 
