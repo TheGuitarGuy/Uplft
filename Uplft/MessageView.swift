@@ -26,7 +26,7 @@ struct MessageView: View {
                     .fill(Color(#colorLiteral(red: 0.9254902005195618, green: 0, blue: 0.5490196347236633, alpha: 0.699999988079071)))
                     .frame(width: 300, height: 90)
                     .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.25)), radius:4, x:0, y:4)
-                Text("Hey! You’re amazing!").font(.custom("Roboto Regular", size: 16)).foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+                Text("Hey! You’re amazing!").font(.custom("Roboto Regular", size: 16)).foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))).frame(width: 250.0, height: 80.0)
             }
 
             
