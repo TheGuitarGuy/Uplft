@@ -86,6 +86,8 @@ struct SignIn: View {
                 text: $email)
                 .underlineTextField()
                 .padding(.leading)
+                .disableAutocorrection(true)
+                .autocapitalization(UITextAutocapitalizationType.none)
             
             SecureField("Enter a password", text: $password)
                 .underlineTextField()
