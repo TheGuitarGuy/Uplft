@@ -24,6 +24,8 @@
 		DC6B469B270BDE8000BFAE92 /* UplftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6B469A270BDE8000BFAE92 /* UplftTests.swift */; };
 		DC6B46A6270BDE8000BFAE92 /* UplftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6B46A5270BDE8000BFAE92 /* UplftUITests.swift */; };
 		DC6B46B4270BE0CE00BFAE92 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DC6B46B3270BE0CE00BFAE92 /* logo.png */; };
+		DC90F75E27127DAE009FECB6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC90F75D27127DAE009FECB6 /* GoogleService-Info.plist */; };
+		DC90F7602712826C009FECB6 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC90F75F2712826C009FECB6 /* MessageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		DC6B46A5270BDE8000BFAE92 /* UplftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UplftUITests.swift; sourceTree = "<group>"; };
 		DC6B46A7270BDE8000BFAE92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC6B46B3270BE0CE00BFAE92 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		DC90F75D27127DAE009FECB6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DC90F75F2712826C009FECB6 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,8 +138,10 @@
 				996B5CC7270D3E2B0024D9B4 /* SignIn.swift */,
 				990153532710D3BD003B2431 /* SessionStore.swift */,
 				996B5CC9270D48860024D9B4 /* CreateMessage.swift */,
+				DC90F75F2712826C009FECB6 /* MessageView.swift */,
 				990153552710D409003B2431 /* User.swift */,
 				99B889A8270E8A9800B0B7DA /* GoogleService-Info.plist */,
+				DC90F75D27127DAE009FECB6 /* GoogleService-Info.plist */,
 				DC6B468E270BDE8000BFAE92 /* Preview Content */,
 			);
 			path = Uplft;
@@ -281,6 +287,7 @@
 			files = (
 				DC6B4690270BDE8000BFAE92 /* Preview Assets.xcassets in Resources */,
 				99B889A9270E8A9900B0B7DA /* GoogleService-Info.plist in Resources */,
+				DC90F75E27127DAE009FECB6 /* GoogleService-Info.plist in Resources */,
 				DC6B46B4270BE0CE00BFAE92 /* logo.png in Resources */,
 				DC6B468D270BDE8000BFAE92 /* Assets.xcassets in Resources */,
 			);
@@ -311,6 +318,7 @@
 				9982E7B8270D15BF00AC7EC4 /* AppDelegate.swift in Sources */,
 				990153542710D3BD003B2431 /* SessionStore.swift in Sources */,
 				DC6B468B270BDE7F00BFAE92 /* ContentView.swift in Sources */,
+				DC90F7602712826C009FECB6 /* MessageView.swift in Sources */,
 				DC6B4689270BDE7F00BFAE92 /* UplftApp.swift in Sources */,
 				996B5CC8270D3E2B0024D9B4 /* SignIn.swift in Sources */,
 				990153562710D409003B2431 /* User.swift in Sources */,
